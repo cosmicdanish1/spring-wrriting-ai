@@ -1,5 +1,5 @@
-# Use a base image with Java installed
-FROM openjdk:17-jdk-slim
+# Use a base image with Java 21 installed
+FROM eclipse-temurin:21-jdk-jammy
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -12,4 +12,3 @@ EXPOSE 8080
 
 # Define the command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
